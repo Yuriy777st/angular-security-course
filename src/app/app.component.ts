@@ -13,7 +13,7 @@ export class AppComponent  implements OnInit {
     isLoggedIn$: Observable<boolean>;
     isLoggedOut$: Observable<boolean>;
 
-    constructor(private authService:AuthService) {
+    constructor(private authService: AuthService) {
 
     }
 
@@ -23,7 +23,7 @@ export class AppComponent  implements OnInit {
     }
 
     logout() {
-
+      this.authService.logOut().subscribe();
     }
 
 }
